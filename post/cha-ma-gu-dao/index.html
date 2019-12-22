@@ -7,7 +7,7 @@
 <title>
     茶马古道 | MyTea
 </title>
-<link rel="shortcut icon" href="https://nwnh15.github.io//favicon.ico?v=1577004372097">
+<link rel="shortcut icon" href="https://nwnh15.github.io//favicon.ico?v=1577007112987">
 <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
 <link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
@@ -18,8 +18,18 @@
 <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
 <script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
 
+<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+
+
 
         
+            
+                <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+                <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+                
+
+                    
+                            
 </head>
 
 <body>
@@ -28,7 +38,7 @@
     <div class="nav">
         <div class="logo">
             <a href="https://nwnh15.github.io/">
-                <img class="avatar" src="https://nwnh15.github.io//images/avatar.png?v=1577004372097" alt="">
+                <img class="avatar" src="https://nwnh15.github.io//images/avatar.png?v=1577007112987" alt="">
             </a>
             <div class="site-title">
                 <h1>
@@ -127,6 +137,15 @@
 <p>壮丽的自然风光、多彩的民族风情、众多的名胜古迹，将使茶马古道旅游线路成为21世纪中国最具吸引力的旅游线路之一。</p>
 
                                 </div>
+
+                                <div id="vcomments"></div>
+    <script>
+        new Valine({
+            el: '#vcomments',
+            appId: 'uDcmDrd0vxKXTjsvbN4hb8oB-gzGzoHsz',
+            appKey: '9LGJDBQ8TjTRtosaxesWDl2p'
+        })
+    </script>
                     </article>
                     <!--  -->
                     
@@ -141,7 +160,7 @@
                                 <!-- id-card -->
                                 
     <div class="id_card i-card">
-        <div class="id_card-avatar" style="background-image: url(https://nwnh15.github.io//images/avatar.png?v=1577004372097)">
+        <div class="id_card-avatar" style="background-image: url(https://nwnh15.github.io//images/avatar.png?v=1577007112987)">
         </div>
         <h1 class="id_card-title">
             MyTea
@@ -191,6 +210,26 @@
         });
     </script>
     
+        
+            <script>
+    window.onload = function() {
+        var gitalk = new Gitalk({
+            clientID: '',
+            clientSecret: '',
+            repo: '',
+            owner: '',
+            admin: [''],
+            id: (location.pathname).substring(0, 49), // Ensure uniqueness and length less than 50
+            distractionFreeMode: false // Facebook-like distraction free mode
+        })
+
+        gitalk.render('gitalk-container')
+    }
+</script>
+                
+
+                    
+                                
 </body>
 
 </html>
